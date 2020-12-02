@@ -28,7 +28,7 @@ const passwordPhilosophy = () => {
         const isFirstIndexValid = password['password'][firstIndex] === password['letter'];
         const isSecondIndexValid = password['password'][secondIndex] === password['letter'];
 
-        if ((isFirstIndexValid || isSecondIndexValid) && !(isFirstIndexValid && isSecondIndexValid)) {
+        if (isFirstIndexValid ^ isSecondIndexValid) {
             return validPasswords + 1;
         }
 
